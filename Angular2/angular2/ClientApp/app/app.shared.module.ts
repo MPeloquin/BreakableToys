@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
-import { AppComponent } from './components/app/app.component';
-import { HomeComponent } from './components/home/home.component';
-
+import { AppComponent } from './app/app.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './shared/header/header.component'
+import { PostSummaryComponent } from './posts/post-summary/post-summary.component';
+import { PostDetailComponent } from './posts/post-details/post-detail.component';
+import { PostService } from './posts/post.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-         HomeComponent
+        HomeComponent,
+        HeaderComponent,
+        PostSummaryComponent,
+        PostDetailComponent,
+
     ],
     imports: [
         CommonModule,
@@ -20,8 +26,12 @@ import { HomeComponent } from './components/home/home.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'post/:id', component: PostDetailComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        PostService
     ]
 })
 export class AppModuleShared {
