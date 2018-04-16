@@ -6,9 +6,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component'
-import { PostSummaryComponent } from './posts/post-summary/post-summary.component';
-import { PostDetailComponent } from './posts/post-details/post-detail.component';
-import { PostService } from './posts/post.service';
+import { PostSummaryComponent } from './post/post-summary/post-summary.component';
+import { PostDetailComponent } from './post/post-details/post-detail.component';
+import { PostService } from './post/post.service';
 
 @NgModule({
     declarations: [

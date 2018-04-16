@@ -1,5 +1,5 @@
-﻿import { Comment } from '../comments/comment.type'
-import { Account } from '../accounts/account.type'
+﻿import { Comment } from '../comment/comment.type'
+import { User } from '../user/user.type'
 
 export class Post {
     id: number;
@@ -7,7 +7,7 @@ export class Post {
     url: string;
     creationDate: Date;
     comments: Comment[]
-    author: Account;
+    author: User;
 
     upvotes: number;
 }

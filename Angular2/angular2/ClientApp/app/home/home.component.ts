@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Post } from '../posts/post.type';
-import { PostService } from '../posts/post.service';
+import { Post } from '../post/post.type';
+import { PostService } from '../post/post.service';
 
 
 @Component({

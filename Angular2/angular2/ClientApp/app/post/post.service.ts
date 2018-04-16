@@ -16,6 +16,6 @@ export class PostService {
     }
 
     getPost(id: number): Observable<Post> {
-        return of({ id: 1, title: "Test", url: "https://www.google.com", upvotes: 0, creationDate: new Date(), comments: [], author: { userName: "Maxime", creationDate: new Date() } });
+        return of(this.posts.find(post => post.id == id)!);
     }
 }

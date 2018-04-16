@@ -21,23 +21,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\accounts\account.type.ts" />
-    <None Remove="ClientApp\app\comments\comment.type.ts" />
-    <None Remove="ClientApp\app\posts\post-details\post-detail.component.ts" />
-    <None Remove="ClientApp\app\posts\post.service.ts" />
-    <None Remove="ClientApp\app\posts\post.type.ts" />
+    <None Remove="ClientApp\app\comment\comment.type.ts" />
+    <None Remove="ClientApp\app\post\post-details\post-detail.component.ts" />
+    <None Remove="ClientApp\app\post\post.service.ts" />
+    <None Remove="ClientApp\app\post\post.type.ts" />
     <None Remove="ClientApp\app\shared\header\header.component.ts" />
-    <None Remove="ClientApp\app\posts\post-summary\post-summary.component.ts" />
+    <None Remove="ClientApp\app\post\post-summary\post-summary.component.ts" />
+    <None Remove="ClientApp\app\user\user.type.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\accounts\account.type.ts" />
-    <TypeScriptCompile Include="ClientApp\app\comments\comment.type.ts" />
-    <TypeScriptCompile Include="ClientApp\app\posts\post-details\post-detail.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\posts\post.service.ts" />
-    <TypeScriptCompile Include="ClientApp\app\posts\post.type.ts" />
+    <TypeScriptCompile Include="ClientApp\app\user\user.type.ts" />
+    <TypeScriptCompile Include="ClientApp\app\comment\comment.type.ts" />
+    <TypeScriptCompile Include="ClientApp\app\post\post-details\post-detail.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\post\post.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\post\post.type.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\header\header.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\posts\post-summary\post-summary.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\post\post-summary\post-summary.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
