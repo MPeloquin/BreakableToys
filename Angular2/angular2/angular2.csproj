@@ -20,30 +20,6 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="ClientApp\app\comment\comment.type.ts" />
-    <None Remove="ClientApp\app\post\post-details\post-detail.component.ts" />
-    <None Remove="ClientApp\app\post\post.service.ts" />
-    <None Remove="ClientApp\app\post\post.type.ts" />
-    <None Remove="ClientApp\app\shared\header\header.component.ts" />
-    <None Remove="ClientApp\app\post\post-summary\post-summary.component.ts" />
-    <None Remove="ClientApp\app\user\user.type.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\user\user.type.ts" />
-    <TypeScriptCompile Include="ClientApp\app\comment\comment.type.ts" />
-    <TypeScriptCompile Include="ClientApp\app\post\post-details\post-detail.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\post\post.service.ts" />
-    <TypeScriptCompile Include="ClientApp\app\post\post.type.ts" />
-    <TypeScriptCompile Include="ClientApp\app\shared\header\header.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\post\post-summary\post-summary.component.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\assets\" />
-  </ItemGroup>
-
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
