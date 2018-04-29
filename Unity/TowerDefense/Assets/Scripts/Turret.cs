@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turrent : MonoBehaviour
+public class Turret : MonoBehaviour
 {
     private Transform target;
 
+    [Header("Attributes")]
     public float range = 15f;
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
+
+    [Header("Unity setup fields")]
     public string enemyTag = "Enemy";
     public Transform partToRotate;
-
     public float turnSpeed = 10f;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
 	
@@ -28,7 +34,27 @@ public class Turrent : MonoBehaviour
 	    Quaternion lookRotation = Quaternion.Lerp(partToRotate.rotation, Quaternion.LookRotation(dir), Time.deltaTime * turnSpeed);
 	    Vector3 rotation = lookRotation.eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0, rotation.y, 0);
+
+	    if (fireCountdown <= 0)
+	    {
+	        Shoot();
+	        fireCountdown = 1f / fireRate;
+	    }
+
+	    fireCountdown -= Time.deltaTime;
 	}
+
+    private void Shoot()
+    {
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
+    }
 
     void UpdateTarget()
     {
